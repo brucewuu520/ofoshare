@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.ofo.share.activity.MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                android:background="@drawable/selector_edittext_bg"
+                android:gravity="center"
+                android:hint="input ofo no"
+                android:minHeight="60dp"
+                android:textColor="@android:color/black" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_find_password"
+                style="@style/Button.Primary"
+                android:layout_margin="16dp"
+                android:text="Go" />
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="60sp"
+                android:textStyle="italic"
+                tools:text="4568" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_camera_enhance_white_18dp" />
+
+</android.support.design.widget.CoordinatorLayout>
